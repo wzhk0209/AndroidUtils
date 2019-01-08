@@ -1,1 +1,2 @@
 # AndroidUtils
+此工程提供Android开发相关工具类和简单的框架
