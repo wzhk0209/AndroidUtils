@@ -1,1 +1,1 @@
-include ':app', ':requestlibrary', ':mvplibrary'
+include ':app', ':requestlibrary', ':mvplibrary', ':sqllibrary'

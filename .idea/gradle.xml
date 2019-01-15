@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mvplibrary" />
             <option value="$PROJECT_DIR$/requestlibrary" />
+            <option value="$PROJECT_DIR$/sqllibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
