@@ -2,7 +2,9 @@ package com.wzk;
 
 import com.wzk.callback.RequestCallBack;
 import com.wzk.okhttp.OkHttpRequest;
+import com.wzk.okhttp.OkHttpsRequest;
 import com.wzk.request.Request;
+import com.wzk.request.RequestType;
 
 import java.util.Map;
 
@@ -39,16 +41,24 @@ public class RequestApplication {
         return _instance;
     }
 
+    /**
+     * 默认是http请求，想切换为https请求调用方法
+     */
+    public void setHttpsRequest(){
+        this.mRequest = OkHttpsRequest.getInstance();
+    }
 
-    public void sendPost(String url, Map<String, Object> params, RequestCallBack requestCallBack) {
-
-        mRequest.post(url, params, requestCallBack);
+    /**
+     * 当请求是https的请求时，想要切换为http请求调用方法
+     */
+    public void setHttpRequest(){
+        this.mRequest = OkHttpRequest.getInstance();
     }
 
 
-    public void sendGet(String url, Map<String, Object> params, RequestCallBack requestCallBack) {
+    public void sendRequest(String url, Map<String, Object> params, RequestType type, RequestCallBack requestCallBack) {
 
-        mRequest.get(url, params, requestCallBack);
+        mRequest.sendRequest(url, params, type,requestCallBack);
     }
 
 }

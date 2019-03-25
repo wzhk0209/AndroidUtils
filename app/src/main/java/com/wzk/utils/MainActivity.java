@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.wzk.RequestApplication;
 import com.wzk.callback.RequestCallBack;
 import com.wzk.mvp.BaseActivity;
+import com.wzk.request.RequestType;
 import com.wzk.utils.entity.NewTopResponseInfo;
 import com.wzk.utils.presenter.MainActivityPresenter;
 import com.wzk.utils.view.MainActivityView;
@@ -37,7 +38,7 @@ public class MainActivity extends BaseActivity<MainActivityView, MainActivityPre
 
         String url = "http://v.juhe.cn/toutiao/index?type=top&key=cbf2fe6ac72e1f0a38974beb94fe912f";
         mPresenter.getServiceData(url,null);
-        RequestApplication.getInstance().sendGet(url, null, new RequestCallBack<NewTopResponseInfo>() {
+        RequestApplication.getInstance().sendRequest(url, null, RequestType.GET, new RequestCallBack<NewTopResponseInfo>() {
             @Override
             protected void onSuccess(NewTopResponseInfo resultBean) {
                 Log.e("wzk", "返回信息:" + resultBean.toString());

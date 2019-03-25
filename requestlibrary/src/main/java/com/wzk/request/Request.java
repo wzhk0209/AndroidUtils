@@ -21,20 +21,11 @@ public interface Request {
      *          请求url
      * @param params
      *          请求参数
+     * @param type
+     *          请求类型
      * @param iCallBack
      *          请求回调
      */
-    void get(String url, Map<String,Object> params,ICallBack iCallBack);
-
-    /**
-     * 提供get请求方式
-     * @param url
-     *          请求url
-     * @param params
-     *          请求参数
-     * @param iCallBack
-     *          请求回调
-     */
-    void post(String url, Map<String,Object> params,ICallBack iCallBack);
+    void sendRequest(String url,Map<String,Object> params,RequestType type,ICallBack iCallBack);
 
 }

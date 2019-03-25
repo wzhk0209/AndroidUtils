@@ -1,8 +1,8 @@
 package com.wzk.mvp;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.wzk.mvp.Presenter.BasePresenter;
 
@@ -10,7 +10,7 @@ import com.wzk.mvp.Presenter.BasePresenter;
  * Created by wangzhaokang on 2019/1/8.
  */
 
-public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppCompatActivity {
+public abstract class BaseActivity<V,T extends BasePresenter<V>> extends Activity {
 
     protected T mPresenter;
 

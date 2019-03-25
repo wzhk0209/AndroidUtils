@@ -11,6 +11,10 @@ import java.lang.reflect.Type;
 
 public abstract class RequestCallBack<Result> implements ICallBack {
 
+    /**
+     * 解析回调
+     * @param result
+     */
     @Override
     public void onSuccess(String result) {
 
